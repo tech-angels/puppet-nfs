@@ -11,8 +11,9 @@ class nfs::server::debian inherits nfs::client::debian {
   }
 
   service {"nfs-kernel-server":
-    enable  => "true",
-    pattern => "nfsd"
+    enable	=> true,
+    ensure	=> running,
+    pattern	=> "nfsd"
   }
 
 }
